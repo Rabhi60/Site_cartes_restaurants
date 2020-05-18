@@ -1,8 +1,7 @@
-@import "utils/variables";
-@import "utils/mixins";
-
+@charset "UTF-8";
+/* variables */
+/* mixins */
 /* général */
-
 html,
 body {
   font-size: 16px;
@@ -14,29 +13,29 @@ header,
 main {
   text-align: center;
 }
+
 header {
-  background-color: $green;
-  color: $yellow;
+  background-color: #3a9f7f;
+  color: #cece00;
   height: 8rem;
   line-height: 8rem;
   margin: 0rem;
 }
 
 /* page principal */
-
 .note,
 .chic,
 .delice,
 .palette {
-  background-color: $red;
+  background-color: rgba(186, 41, 41, 0.3);
   width: 80vw;
   height: 12rem;
-  box-shadow: 0rem 0rem 0.5rem rgb(182, 178, 178);
+  box-shadow: 0rem 0rem 0.5rem #b6b2b2;
   margin: 1rem auto;
 }
 
 .btn {
-  background-color: $green;
+  background-color: #3a9f7f;
   color: yellow;
   width: 35vw;
   height: 3rem;
@@ -45,6 +44,7 @@ header {
   text-align: center;
   border-radius: 0.5rem;
 }
+
 a {
   display: block;
   width: 100%;
@@ -57,15 +57,17 @@ a {
 li {
   list-style: none;
 }
+
 p {
   text-align: left;
 }
+
 .price p {
   text-align: right;
 }
 
 h1 a {
-  color: $yellow;
+  color: #cece00;
   font-size: 4rem;
 }
 
@@ -73,29 +75,36 @@ h1 a {
   display: flex;
   justify-content: space-between;
 }
+
 .note_menu {
-  background-color: $red;
+  background-color: rgba(186, 41, 41, 0.3);
   width: 80vw;
   height: 80vh;
   margin: 1rem auto;
 }
+
 .note_article {
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
+
 .palette_menu {
   width: 80vw;
   margin: 0 auto;
-  &__article {
-  }
 }
 /* footer */
 footer {
-  background-color: $green;
+  background-color: #3a9f7f;
   height: 5rem;
   display: flex;
   justify-content: space-between;
-  a {
-    @include footer_a;
-  }
 }
+footer a {
+  width: 22%;
+  text-transform: none;
+  line-height: 5rem;
+  color: #cece00;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+/* mixins */
+
+@mixin footer_a {
+  width: 22%;
+  text-transform: none;
+  line-height: 5rem;
+  color: $yellow;
+  font-size: 1.5rem;
+}
