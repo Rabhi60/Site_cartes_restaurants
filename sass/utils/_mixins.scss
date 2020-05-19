@@ -1,9 +1,18 @@
 /* mixins */
 
-@mixin footer_a {
-  width: 22%;
-  text-transform: none;
-  line-height: 5rem;
-  color: $yellow;
-  font-size: 1.5rem;
+@mixin base_index_article 
+{ 
+  width: 80vw;
+  height: 12rem;
+  box-shadow: 0rem 0rem 0.5rem rgb(182, 178, 178);
+  margin: 1rem auto;
+  text-align: center;
+  h2{
+    display: inline-block;
+    margin-top: 4rem;
+  }
+  span{
+    display: inline-block;
+    margin-top: 1rem;;
+  }
 }

@@ -1,0 +1,19 @@
+/* header */
+
+header {
+  background-color: $green;
+  height: 8rem;
+  margin-top: 0;
+  text-align: center;
+  line-height: 8rem;
+  a{
+    text-decoration: none;
+  }
+  .heading{
+    color: $yellow;
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.15rem;
+  }
+}

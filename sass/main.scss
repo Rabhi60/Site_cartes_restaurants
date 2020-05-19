@@ -1,6 +1,3 @@
-@import "utils/variables";
-@import "utils/mixins";
-
 /* général */
 
 html,
@@ -9,93 +6,250 @@ body {
   margin: 0;
 }
 
-/* header */
-header,
-main {
-  text-align: center;
-}
-header {
-  background-color: $green;
-  color: $yellow;
-  height: 8rem;
-  line-height: 8rem;
-  margin: 0rem;
-}
+@import "utils/variables";
+@import "utils/mixins";
+@import "layouts/header";
+@import "layouts/footer";
+@import "components/buttons";
 
 /* page principal */
 
-.note,
-.chic,
-.delice,
-.palette {
-  background-color: $red;
-  width: 80vw;
-  height: 12rem;
-  box-shadow: 0rem 0rem 0.5rem rgb(182, 178, 178);
-  margin: 1rem auto;
+.note, .chic, .delice, .palette {
+  @include base_index_article;
 }
 
-.btn {
-  background-color: $green;
-  color: yellow;
-  width: 35vw;
-  height: 3rem;
-  line-height: 3rem;
-  margin: 1rem auto;
-  text-align: center;
-  border-radius: 0.5rem;
+.note{
+  background-color: $color_note_fond;
+  font-family: 'Devonshire', sans-serif;
+  font-size: 1rem;
+  h2{
+    color: rgb(66, 34, 34);
+    font-weight: normal;
+    span{
+      font-family: 'Segoe Print','kalam', sans-serif;
+      font-weight: bolder;
+    }
+  }
 }
-a {
+
+
+.chic{
+  background-color: $color_chic_fond;
+  font-family: 'Croissant One', sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  h2{
+    padding: 0.2rem;
+    font-weight: normal;
+    background: linear-gradient(to left, $color_chic_font_secondary, $color_chic_font_primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+    span{
+      color: $color_chic_font_primary;
+      font-family: serif;
+      font-weight: bolder;
+    }
+  }
+}
+
+.delice{
+  background-color: $color_delice_fond;
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 1.1rem;
+  h2{
+    padding: 0.2rem;
+    font-weight: normal;
+    background: linear-gradient(to right, $color_delice_font_secondary, $color_delice_font_primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    span{
+      color: $color_delice_font_primary;
+      font-family: 'Segoe Print','kalam', sans-serif;
+      font-weight: normal;
+    }
+  }
+}
+
+.palette{
+  background-color: $color_palette_fond;
+  font-family: 'Kaushan Script', sans-serif;
+  font-size: 1rem;
+  h2{
+    padding: 0.2rem;
+    font-weight: normal;
+    background: linear-gradient(to left, $color_palette_font_secondary, $color_palette_font_primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+    span{
+      color: $color_palette_font_primary;
+      font-family: 'Segoe Print','kalam', sans-serif;
+      font-weight: normal;
+    }
+  }
+}
+  
+
+.index_bloc_a {
   display: block;
   width: 100%;
   height: 100%;
   text-decoration: none;
   color: black;
+
 }
+
+
 
 /* pages menus */
 li {
   list-style: none;
 }
+
 p {
   text-align: left;
 }
+
 .price p {
   text-align: right;
 }
 
-h1 a {
-  color: $yellow;
-  font-size: 4rem;
-}
+
 
 .liste {
   display: flex;
   justify-content: space-between;
 }
-.note_menu {
-  background-color: $red;
-  width: 80vw;
-  height: 80vh;
-  margin: 1rem auto;
-}
-.note_article {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-.palette_menu {
-  width: 80vw;
-  margin: 0 auto;
-  &__article {
+/* la note enchantee */
+
+.note_title {
+  &__heading {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    text-align: center;
   }
 }
-/* footer */
-footer {
-  background-color: $green;
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  a {
-    @include footer_a;
+
+.note_menu {
+  font-family: "Devonshire", sans-serif;
+  background-color: $color_note_fond;
+  width: 70vw;
+  margin: 1rem auto;
+  font-weight: normal;
+  &__article {
+    width: 60vw;
+    margin: auto;
+    h2{
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'segoe Print';
+    }
+    p{
+      font-size: 0.6rem;
+      font-family: 'segoe Print';
+    }
+  }
+}
+
+/* Le chic à la française */
+
+.chic_title {
+  &__heading {
+    font-family: Arial,  sans-serif;
+    text-align: center;
+  }
+}
+
+.chic_menu {
+  font-family: "Croissant One", sans-serif;
+  background-color: $color_chic_fond;
+  width: 70vw;
+  margin: 1rem auto;
+  font-weight: normal;
+  &__article {
+    width: 60vw;
+    margin: auto;
+    h2{
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+      font-size: 1rem;
+      font-family: "Croissant One", sans-serif;
+    }
+    p{
+      font-size: 0.6rem;
+      font-family: "Croissant One", sans-serif;
+    }
+  }
+}
+
+/* Le delice des papilles */
+
+.delice_title {
+  &__heading {
+    font-family: Arial,  sans-serif;
+    text-align: center;
+  }
+}
+
+.delice_menu {
+  font-family: "Dancing Script", sans-serif;
+  background-color: $color_delice_fond;
+  width: 70vw;
+  margin: 1rem auto;
+  font-weight: normal;
+  &__article {
+    width: 60vw;
+    margin: auto;
+    h2{
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'Segoe Print','Kalam', sans-serif;
+    }
+    p{
+      font-size: 0.8rem;
+      font-family: 'Segoe Print','kalam', sans-serif;
+    }
+  }
+}
+
+
+/* palette du gout */
+
+.palette_title {
+  &__heading {
+    font-family: Arial,  sans-serif;
+    text-align: center;
+  }
+}
+
+.palette_menu {
+  font-family: "Devonshire", sans-serif;
+  background-color: $color_palette_fond;
+  width: 70vw;
+  margin: 1rem auto;
+  &__article {
+    width: 60vw;
+    margin: 2rem auto 3rem auto;
+    h2{
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'segoe Print';
+    }
+    p{
+      font-size: 0.6rem;
+      font-family: 'segoe Print';
+    }
   }
 }

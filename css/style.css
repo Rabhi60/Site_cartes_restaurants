@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/* variables */
-/* mixins */
 /* général */
 html,
 body {
@@ -8,34 +6,48 @@ body {
   margin: 0;
 }
 
+/* variables */
+/* mixins */
 /* header */
-header,
-main {
-  text-align: center;
-}
-
 header {
-  background-color: #3a9f7f;
-  color: #cece00;
+  background-color: #569d88;
   height: 8rem;
+  margin-top: 0;
+  text-align: center;
   line-height: 8rem;
-  margin: 0rem;
+}
+header a {
+  text-decoration: none;
+}
+header .heading {
+  color: #fdcc44;
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.15rem;
 }
 
-/* page principal */
-.note,
-.chic,
-.delice,
-.palette {
-  background-color: rgba(186, 41, 41, 0.3);
-  width: 80vw;
-  height: 12rem;
-  box-shadow: 0rem 0rem 0.5rem #b6b2b2;
-  margin: 1rem auto;
+/* footer */
+footer {
+  background-color: #569d88;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer a {
+  text-decoration: none;
+  margin: auto 1rem;
+}
+footer h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #fdcc44;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
+/* button */
 .btn {
-  background-color: #3a9f7f;
+  background-color: #569d88;
   color: yellow;
   width: 35vw;
   height: 3rem;
@@ -45,7 +57,95 @@ header {
   border-radius: 0.5rem;
 }
 
-a {
+/* page principal */
+.note, .chic, .delice, .palette {
+  width: 80vw;
+  height: 12rem;
+  box-shadow: 0rem 0rem 0.5rem #b6b2b2;
+  margin: 1rem auto;
+  text-align: center;
+}
+.note h2, .chic h2, .delice h2, .palette h2 {
+  display: inline-block;
+  margin-top: 4rem;
+}
+.note span, .chic span, .delice span, .palette span {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.note {
+  background-color: #fce0dc;
+  font-family: "Devonshire", sans-serif;
+  font-size: 1rem;
+}
+.note h2 {
+  color: #422222;
+  font-weight: normal;
+}
+.note h2 span {
+  font-family: "Segoe Print", "kalam", sans-serif;
+  font-weight: bolder;
+}
+
+.chic {
+  background-color: #fff5fe;
+  font-family: "Croissant One", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+}
+.chic h2 {
+  padding: 0.2rem;
+  font-weight: normal;
+  background: linear-gradient(to left, #915afd, #d9862a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: normal;
+}
+.chic h2 span {
+  color: #d9862a;
+  font-family: serif;
+  font-weight: bolder;
+}
+
+.delice {
+  background-color: #f9f9f9;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 1.1rem;
+}
+.delice h2 {
+  padding: 0.2rem;
+  font-weight: normal;
+  background: linear-gradient(to right, #113de1, #0188fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.delice h2 span {
+  color: #0188fb;
+  font-family: "Segoe Print", "kalam", sans-serif;
+  font-weight: normal;
+}
+
+.palette {
+  background-color: #fdfffd;
+  font-family: "Kaushan Script", sans-serif;
+  font-size: 1rem;
+}
+.palette h2 {
+  padding: 0.2rem;
+  font-weight: normal;
+  background: linear-gradient(to left, #c0ff7f, #3a9436);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: normal;
+}
+.palette h2 span {
+  color: #3a9436;
+  font-family: "Segoe Print", "kalam", sans-serif;
+  font-weight: normal;
+}
+
+.index_bloc_a {
   display: block;
   width: 100%;
   height: 100%;
@@ -66,45 +166,128 @@ p {
   text-align: right;
 }
 
-h1 a {
-  color: #cece00;
-  font-size: 4rem;
-}
-
 .liste {
   display: flex;
   justify-content: space-between;
 }
 
-.note_menu {
-  background-color: rgba(186, 41, 41, 0.3);
-  width: 80vw;
-  height: 80vh;
-  margin: 1rem auto;
+/* la note enchantee */
+.note_title__heading {
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  text-align: center;
 }
 
-.note_article {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+.note_menu {
+  font-family: "Devonshire", sans-serif;
+  background-color: #fce0dc;
+  width: 70vw;
+  margin: 1rem auto;
+  font-weight: normal;
+}
+.note_menu__article {
+  width: 60vw;
+  margin: auto;
+}
+.note_menu__article h2 {
+  text-align: center;
+}
+.note_menu__article h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "segoe Print";
+}
+.note_menu__article p {
+  font-size: 0.6rem;
+  font-family: "segoe Print";
+}
+
+/* Le chic à la française */
+.chic_title__heading {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.chic_menu {
+  font-family: "Croissant One", sans-serif;
+  background-color: #fff5fe;
+  width: 70vw;
+  margin: 1rem auto;
+  font-weight: normal;
+}
+.chic_menu__article {
+  width: 60vw;
+  margin: auto;
+}
+.chic_menu__article h2 {
+  text-align: center;
+}
+.chic_menu__article h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Croissant One", sans-serif;
+}
+.chic_menu__article p {
+  font-size: 0.6rem;
+  font-family: "Croissant One", sans-serif;
+}
+
+/* Le delice des papilles */
+.delice_title__heading {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.delice_menu {
+  font-family: "Dancing Script", sans-serif;
+  background-color: #f9f9f9;
+  width: 70vw;
+  margin: 1rem auto;
+  font-weight: normal;
+}
+.delice_menu__article {
+  width: 60vw;
+  margin: auto;
+}
+.delice_menu__article h2 {
+  text-align: center;
+}
+.delice_menu__article h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Segoe Print", "Kalam", sans-serif;
+}
+.delice_menu__article p {
+  font-size: 0.8rem;
+  font-family: "Segoe Print", "kalam", sans-serif;
+}
+
+/* palette du gout */
+.palette_title__heading {
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .palette_menu {
-  width: 80vw;
-  margin: 0 auto;
+  font-family: "Devonshire", sans-serif;
+  background-color: #fdfffd;
+  width: 70vw;
+  margin: 1rem auto;
 }
-/* footer */
-footer {
-  background-color: #3a9f7f;
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
+.palette_menu__article {
+  width: 60vw;
+  margin: 2rem auto 3rem auto;
 }
-footer a {
-  width: 22%;
-  text-transform: none;
-  line-height: 5rem;
-  color: #cece00;
-  font-size: 1.5rem;
+.palette_menu__article h2 {
+  text-align: center;
+}
+.palette_menu__article h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "segoe Print";
+}
+.palette_menu__article p {
+  font-size: 0.6rem;
+  font-family: "segoe Print";
 }
 
 /*# sourceMappingURL=style.css.map */
