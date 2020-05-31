@@ -5,19 +5,33 @@ footer {
   height: 5rem;
   display: flex;
   justify-content: space-between;
-
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   a {
     text-decoration: none;
     margin: auto 1rem;
+    &:hover {
+      animation: effet_wiggle 200ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
+    }
   }
 
   h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: $yellow;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
   }
-
-
+}
+@keyframes effet_wiggle {
+  25% {
+    // entièrement à droite
+    transform: translateX(1%);
+  }
+  75% {
+    // entièrement à gauche
+    transform: translateX(1% * -1);
+  }
 }

@@ -2,12 +2,22 @@
 /* général */
 html,
 body {
-  font-size: 16px;
+  font-size: 62.5%;
   margin: 0;
+  padding: 0;
 }
 
 /* variables */
+/* box-shadow */
+/* couleur note*/
+/* couleur chic */
+/* couleur delice */
+/* couleur palette */
+/* couleur header, footer et .btn */
 /* mixins */
+/* page principal*/
+/* animation zoom avec le hover */
+/* autres pages */
 /* header */
 header {
   background-color: #569d88;
@@ -20,8 +30,9 @@ header a {
   text-decoration: none;
 }
 header .heading {
+  margin: 0;
   color: #fdcc44;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: -0.15rem;
@@ -33,45 +44,60 @@ footer {
   height: 5rem;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 footer a {
   text-decoration: none;
   margin: auto 1rem;
 }
+footer a:hover {
+  animation: effet_wiggle 200ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 2;
+}
 footer h3 {
   font-family: "Montserrat", sans-serif;
   color: #fdcc44;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
+@keyframes effet_wiggle {
+  25% {
+    transform: translateX(1%);
+  }
+  75% {
+    transform: translateX(-1%);
+  }
+}
 /* button */
 .btn {
-  background-color: #569d88;
-  color: yellow;
   width: 35vw;
   height: 3rem;
   line-height: 3rem;
-  margin: 1rem auto;
+  margin: 1rem auto 6rem auto;
   text-align: center;
   border-radius: 0.5rem;
+  background-color: #569d88;
+}
+.btn h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #fdcc44;
 }
 
 /* page principal */
 .note, .chic, .delice, .palette {
   width: 80vw;
-  height: 12rem;
+  height: 50vh;
   box-shadow: 0rem 0rem 0.5rem #b6b2b2;
   margin: 1rem auto;
+  font-size: 1rem;
   text-align: center;
 }
-.note h2, .chic h2, .delice h2, .palette h2 {
-  display: inline-block;
-  margin-top: 4rem;
-}
-.note span, .chic span, .delice span, .palette span {
-  display: inline-block;
-  margin-top: 1rem;
+.note div, .chic div, .delice div, .palette div {
+  padding-top: 17vh;
 }
 
 .note {
@@ -79,70 +105,95 @@ footer h3 {
   font-family: "Devonshire", sans-serif;
   font-size: 1rem;
 }
+.note div {
+  padding-top: 13vh;
+}
 .note h2 {
-  color: #422222;
+  color: #390a10;
   font-weight: normal;
 }
+.note h2 .fa-music {
+  background: linear-gradient(to left, #f7906a, #f14c5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .note h2 span {
+  background-color: #390a10;
+  /* Permet de choisir une autre couleur pour le mot menu */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-weight: bolder;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  font-weight: bold;
 }
 
 .chic {
   background-color: #fff5fe;
   font-family: "Croissant One", sans-serif;
   font-weight: normal;
-  font-size: 1rem;
 }
 .chic h2 {
-  padding: 0.2rem;
-  font-weight: normal;
   background: linear-gradient(to left, #915afd, #d9862a);
+  padding: 0.2rem;
+  font-weight: lighter;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: normal;
 }
 .chic h2 span {
-  color: #d9862a;
+  background: #d9862a;
+  /* Permet de choisir une autre couleur pour le mot menu */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Segoe Print", "kalam", sans-serif;
+  font-size: 1.7rem;
+  font-weight: lighter;
   font-family: serif;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .delice {
   background-color: #f9f9f9;
   font-family: "Dancing Script", sans-serif;
-  font-size: 1.1rem;
 }
 .delice h2 {
-  padding: 0.2rem;
-  font-weight: normal;
   background: linear-gradient(to right, #113de1, #0188fb);
+  padding: 0.2rem;
+  font-weight: lighter;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 .delice h2 span {
-  color: #0188fb;
+  background: #0188fb;
+  /* Permet de choisir une autre couleur pour le mot menu */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-weight: normal;
+  font-size: 1.7rem;
+  font-weight: lighter;
 }
 
 .palette {
   background-color: #fdfffd;
   font-family: "Kaushan Script", sans-serif;
-  font-size: 1rem;
 }
 .palette h2 {
-  padding: 0.2rem;
-  font-weight: normal;
   background: linear-gradient(to left, #c0ff7f, #3a9436);
+  padding: 0.2rem;
+  font-weight: lighter;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: normal;
 }
 .palette h2 span {
-  color: #3a9436;
+  background: #3a9436;
+  /* Permet de choisir une autre couleur pour le mot menu */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-weight: normal;
+  font-size: 1.7rem;
+  font-weight: lighter;
 }
 
 .index_bloc_a {
@@ -150,12 +201,22 @@ footer h3 {
   width: 100%;
   height: 100%;
   text-decoration: none;
-  color: black;
+  transition: all 1000ms;
+}
+.index_bloc_a:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
 }
 
 /* pages menus */
+.menu_article_title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
 li {
   list-style: none;
+  margin-left: 0;
 }
 
 p {
@@ -164,11 +225,13 @@ p {
 
 .price p {
   text-align: right;
+  font-weight: bold;
 }
 
 .liste {
   display: flex;
   justify-content: space-between;
+  padding-left: 0;
 }
 
 /* la note enchantee */
@@ -180,24 +243,45 @@ p {
 .note_menu {
   font-family: "Devonshire", sans-serif;
   background-color: #fce0dc;
-  width: 70vw;
-  margin: 1rem auto;
+  color: #390a10;
+  width: 80vw;
+  height: auto;
+  margin: 1rem auto 10rem auto;
   font-weight: normal;
+  padding: 2rem auto;
 }
 .note_menu__article {
-  width: 60vw;
+  width: 65vw;
   margin: auto;
 }
 .note_menu__article h2 {
   text-align: center;
+  font-weight: lighter;
+  font-size: 2rem;
+  padding: 3rem auto;
+}
+.note_menu__article h2 .fa-music {
+  background: linear-gradient(to left, #f7906a, #f14c5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .note_menu__article h3 {
   text-align: center;
   font-size: 1rem;
   font-family: "segoe Print";
 }
+.note_menu__article .title_and_icon {
+  font-family: "Devonshire", sans-serif;
+  font-weight: lighter;
+  font-size: 1.7rem;
+}
+.note_menu__article .title_and_icon .fa-music {
+  background: linear-gradient(to left, #f7906a, #f14c5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .note_menu__article p {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-family: "segoe Print";
 }
 
@@ -210,25 +294,40 @@ p {
 .chic_menu {
   font-family: "Croissant One", sans-serif;
   background-color: #fff5fe;
-  width: 70vw;
-  margin: 1rem auto;
-  font-weight: normal;
+  width: 80vw;
+  height: auto;
+  margin: 1rem auto 10rem auto;
+  font-weight: lighter;
 }
 .chic_menu__article {
-  width: 60vw;
+  width: 70vw;
   margin: auto;
 }
 .chic_menu__article h2 {
+  background: linear-gradient(to left, #915afd, #d9862a);
+  padding: 0.2rem;
+  font-weight: lighter;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
 }
 .chic_menu__article h3 {
   text-align: center;
-  font-size: 1rem;
-  font-family: "Croissant One", sans-serif;
+  font-size: 1.5rem;
+  font-family: serif;
 }
 .chic_menu__article p {
-  font-size: 0.6rem;
-  font-family: "Croissant One", sans-serif;
+  font-size: 1.3rem;
+  font-family: serif;
+}
+.chic_menu__article--one {
+  color: #d9862a;
+}
+.chic_menu__article--two {
+  color: #a6679a;
+}
+.chic_menu__article--three {
+  color: #915afd;
 }
 
 /* Le delice des papilles */
@@ -240,15 +339,22 @@ p {
 .delice_menu {
   font-family: "Dancing Script", sans-serif;
   background-color: #f9f9f9;
-  width: 70vw;
-  margin: 1rem auto;
-  font-weight: normal;
+  width: 80vw;
+  height: 90vh;
+  margin: 1rem auto 10rem auto;
+  font-weight: lighter;
 }
 .delice_menu__article {
-  width: 60vw;
+  width: 70vw;
   margin: auto;
 }
 .delice_menu__article h2 {
+  font-size: 4rem;
+  background: linear-gradient(to right, #113de1, #0188fb);
+  padding: 0.2rem;
+  font-weight: lighter;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
 }
 .delice_menu__article h3 {
@@ -257,7 +363,7 @@ p {
   font-family: "Segoe Print", "Kalam", sans-serif;
 }
 .delice_menu__article p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: "Segoe Print", "kalam", sans-serif;
 }
 
@@ -268,17 +374,24 @@ p {
 }
 
 .palette_menu {
-  font-family: "Devonshire", sans-serif;
+  font-family: "Kaushan Script", sans-serif;
   background-color: #fdfffd;
-  width: 70vw;
-  margin: 1rem auto;
+  width: 80vw;
+  height: 90vh;
+  margin: 1rem auto 10rem auto;
 }
 .palette_menu__article {
-  width: 60vw;
+  width: 70vw;
   margin: 2rem auto 3rem auto;
 }
 .palette_menu__article h2 {
+  background: linear-gradient(to left, #c0ff7f, #3a9436);
+  padding: 0.2rem;
+  font-weight: lighter;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
+  font-size: 4rem;
 }
 .palette_menu__article h3 {
   text-align: center;
@@ -286,8 +399,45 @@ p {
   font-family: "segoe Print";
 }
 .palette_menu__article p {
-  font-size: 0.6rem;
+  font-size: 1rem;
   font-family: "segoe Print";
+}
+
+/* tablette */
+@media screen and (min-width: 768px) {
+  html, body {
+    font-size: 100%;
+  }
+
+  .note div {
+    padding-top: 9vh;
+  }
+
+  .chic div, .delice div, .palette div {
+    padding-top: 13vh;
+  }
+}
+/* Laptop à partir de 1440px/L */
+@media screen and (min-width: 1440px) {
+  .note_chic, .delice_palette {
+    margin-top: 3rem;
+    display: flex;
+    margin: 3rem auto;
+    width: 60vw;
+  }
+
+  .note, .chic, .delice, .palette {
+    width: 25vw;
+    height: 70vh;
+  }
+
+  .note div {
+    padding-top: 20vh;
+  }
+
+  .chic div, .delice div, .palette div {
+    padding-top: 22vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
