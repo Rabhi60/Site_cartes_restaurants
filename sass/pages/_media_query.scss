@@ -2,19 +2,42 @@
 
 @media screen and (min-width:768px){
   html,body{
-    font-size:100%;
+    font-size:80%;
   }
-  
+  .note_chic, .delice_palette{
+    display: flex;
+  }
+  .note, .chic, .delice, .palette{
+    width: 43vw;
+    height:$size * 2 ;
+  }
   .note{
     div{
-      padding-top: 1vh;
+      padding-top: 5vh;
     }
   }
   .chic, .delice, .palette{
     div{
-    padding-top: 10vh;
+    padding-top: 15vh;
+    
 }
   }
+  .note_menu{
+    &__article{
+      div{
+        h3{
+          width: 30%;
+          padding: 0;
+        }
+        img{
+          width: 35%;
+        }
+      }
+    }
+  }
+}
+.btn{
+  margin-bottom: 12rem;
 }
 
 /* Laptop à partir de 1440px/L */
@@ -27,31 +50,34 @@
     margin-top: 3rem;
     display: flex;
     margin: 3rem auto ;
-  width: 70vw;
+    width: 70vw;
   }
   .note, .chic, .delice, .palette{
-    width: 30vw;
-    height:30vw * 1.2 ;
+    width: $size;
+    height:$size * 1.2 ;
   }
   .note{
     div{
-      padding-top: 30vw * 0.2;
+      padding-top: $size * 0.2;
     }
   }
   .chic {
     div{
-      padding-top: 30vw * 0.4;
+      padding-top: $size* 0.4;
     }
   }
   .delice{
     div{
-      padding-top: 30vw * 0.3;
+      padding-top: $size * 0.3;
     }
   }
   .palette{
     div{
-      padding-top: 30vw * 0.31;
+      padding-top: $size * 0.31;
     }
+  }
+  .btn{
+    margin-bottom: 8rem;
   }
 }
 

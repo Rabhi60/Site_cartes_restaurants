@@ -4,18 +4,19 @@
   &__heading {
     font-family: Arial, sans-serif;
     text-align: center;
+    font-size: 2rem;
   }
 }
 
 .delice_menu {
   font-family: "Dancing Script", sans-serif;
   background-color: $color_delice_fond_menu;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   margin: 1rem auto 10rem auto;
   font-weight: lighter;
   &__article {
-    width: 70vw;
+    width: 80vw;
     margin: auto;
     h2 {
       font-size: 4rem;
@@ -28,22 +29,9 @@
       text-align: center;
     }
     div{
-      display: flex;
-      img{
-        margin-top:auto;
-        margin-bottom: auto;
-        width: 35%;
-        height: 2rem;
-        
-      }
+      @include div_h3_trait;
     }
-    h3 {
-      width: 30%;
-      text-align: center;
-      font-size: 1rem;
-      font-family: "Segoe Print", "Kalam", sans-serif;
-      padding: 0 1rem;
-    }
+    
     .liste{
       @include liste;
   }

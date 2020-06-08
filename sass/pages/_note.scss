@@ -2,8 +2,9 @@
 
 .note_title {
   &__heading {
-    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-size: 2rem;
   }
 }
 
@@ -11,19 +12,17 @@
   font-family: "Devonshire", sans-serif;
   background-color: $color_note_fond;
   color: $color_note_font;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   margin: 1rem auto 10rem auto;
   font-weight: normal;
-  padding: 2rem auto;
   &__article {
-    width: 65vw;
+    width: 80vw;
     margin: auto;
     h2 {
       text-align: center;
       font-weight: lighter;
-      font-size: 2rem;
-      padding: 3rem auto;
+      font-size: 3rem;
       .fa-music {
         background: linear-gradient(
           to left,
@@ -35,27 +34,16 @@
       }
     }
     div{
-      display: flex;
-      img{
-        margin-top:auto;
-        margin-bottom: auto;
-        width: 35%;
-        height: 2rem;
-      }
+      @include div_h3_trait;
     }
-    h3 {
-      width: 30%;
-      text-align: center;
-      font-size: 1rem;
-      font-family: "segoe Print";
-      padding: 0 2rem 2rem 2rem;
-    }
+    
     .title_and_icon {
       width: auto;
       text-align: center;
       font-family: "Devonshire", sans-serif;
       font-weight: lighter;
-      font-size: 1.7rem;
+      font-size: 2rem;
+      padding-bottom: 1rem;
       .fa-music {
         background: linear-gradient(
           to left,
@@ -69,11 +57,7 @@
     .liste{
       @include liste;
   }
-    p {
-      font-size: 0.8rem;
-      font-family: "segoe Print";
-      
-    }
+
     &--title{
       @include article_title;
     }

@@ -14,6 +14,7 @@ body {
 /* couleur delice */
 /* couleur palette */
 /* couleur header, footer et .btn */
+/* size */
 /* Variables */
 /* mixins */
 /* page principal*/
@@ -105,7 +106,7 @@ footer h3 {
 /* page principal */
 .note, .chic, .delice, .palette {
   width: 80vw;
-  height: 50vh;
+  height: 100vw;
   box-shadow: 0rem 0rem 0.5rem #b6b2b2;
   margin: 1rem auto;
   font-size: 1rem;
@@ -232,29 +233,28 @@ footer h3 {
 /* page principal */
 /* la note enchantee */
 .note_title__heading {
-  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  font-size: 2rem;
 }
 
 .note_menu {
   font-family: "Devonshire", sans-serif;
   background-color: #fce0dc;
   color: #390a10;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   margin: 1rem auto 10rem auto;
   font-weight: normal;
-  padding: 2rem auto;
 }
 .note_menu__article {
-  width: 65vw;
+  width: 80vw;
   margin: auto;
 }
 .note_menu__article h2 {
   text-align: center;
   font-weight: lighter;
-  font-size: 2rem;
-  padding: 3rem auto;
+  font-size: 3rem;
 }
 .note_menu__article h2 .fa-music {
   background: linear-gradient(to left, #f7906a, #f14c5e);
@@ -262,27 +262,31 @@ footer h3 {
   -webkit-text-fill-color: transparent;
 }
 .note_menu__article div {
+  /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .note_menu__article div img {
   margin-top: auto;
   margin-bottom: auto;
-  width: 35%;
-  height: 2rem;
+  width: 23vw;
+  height: 4.8vw;
 }
-.note_menu__article h3 {
-  width: 30%;
+.note_menu__article div h3 {
+  width: 30vw;
   text-align: center;
-  font-size: 1rem;
-  font-family: "segoe Print";
-  padding: 0 2rem 2rem 2rem;
+  font-size: 1.7rem;
+  font-family: "segoe Print", "Kalam", sans-serif;
+  padding: 0 1rem 1rem 1rem;
 }
 .note_menu__article .title_and_icon {
   width: auto;
   text-align: center;
   font-family: "Devonshire", sans-serif;
   font-weight: lighter;
-  font-size: 1.7rem;
+  font-size: 2rem;
+  padding-bottom: 1rem;
 }
 .note_menu__article .title_and_icon .fa-music {
   background: linear-gradient(to left, #f7906a, #f14c5e);
@@ -290,11 +294,16 @@ footer h3 {
   -webkit-text-fill-color: transparent;
 }
 .note_menu__article .liste {
+  /* liste contenu dans les articles (paragraphe et prix) */
   padding-left: 0;
+}
+.note_menu__article .liste p {
+  font-size: 1.3rem;
+  font-family: "Segoe Print", "kalam", sans-serif;
 }
 .note_menu__article .liste li {
   display: flex;
-  width: 80%;
+  width: 60vw;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
@@ -308,10 +317,6 @@ footer h3 {
   text-align: right;
   font-weight: bold;
 }
-.note_menu__article p {
-  font-size: 0.8rem;
-  font-family: "segoe Print";
-}
 .note_menu__article--title {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -320,53 +325,62 @@ footer h3 {
 /* page la note enchentee */
 /* Le chic à la française */
 .chic_title__heading {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
   text-align: center;
+  font-size: 2rem;
 }
 
 .chic_menu {
   font-family: "Croissant One", sans-serif;
   background-color: #fff5fe;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   margin: 1rem auto 10rem auto;
-  font-weight: lighter;
+  font-weight: normal;
 }
 .chic_menu__article {
-  width: 70vw;
+  width: 80vw;
   margin: auto;
 }
 .chic_menu__article h2 {
+  font-size: 3rem;
+  text-align: center;
   background: linear-gradient(to left, #915afd, #d9862a);
   padding: 0.2rem;
   font-weight: lighter;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
 }
 .chic_menu__article div {
+  /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .chic_menu__article div img {
   margin-top: auto;
   margin-bottom: auto;
-  width: 35%;
-  height: 2rem;
+  width: 23vw;
+  height: 4.8vw;
 }
-.chic_menu__article h3 {
-  width: 30%;
+.chic_menu__article div h3 {
+  width: 30vw;
   text-align: center;
-  font-size: 1rem;
-  font-family: serif;
-  padding: 0 0.2rem;
+  font-size: 1.7rem;
+  font-family: "segoe Print", "Kalam", sans-serif;
+  padding: 0 1rem 1rem 1rem;
 }
 .chic_menu__article .liste {
+  /* liste contenu dans les articles (paragraphe et prix) */
   padding-left: 0;
+}
+.chic_menu__article .liste p {
+  font-size: 1.3rem;
+  font-family: "Segoe Print", "kalam", sans-serif;
 }
 .chic_menu__article .liste li {
   display: flex;
-  width: 80%;
+  width: 60vw;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
@@ -380,8 +394,7 @@ footer h3 {
   text-align: right;
   font-weight: bold;
 }
-.chic_menu__article p {
-  font-size: 0.9rem;
+.chic_menu__article div h3, .chic_menu__article .liste p {
   font-family: serif;
 }
 .chic_menu__article--one {
@@ -403,18 +416,19 @@ footer h3 {
 .delice_title__heading {
   font-family: Arial, sans-serif;
   text-align: center;
+  font-size: 2rem;
 }
 
 .delice_menu {
   font-family: "Dancing Script", sans-serif;
   background-color: #eef0f0;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   margin: 1rem auto 10rem auto;
   font-weight: lighter;
 }
 .delice_menu__article {
-  width: 70vw;
+  width: 80vw;
   margin: auto;
 }
 .delice_menu__article h2 {
@@ -427,27 +441,35 @@ footer h3 {
   text-align: center;
 }
 .delice_menu__article div {
+  /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .delice_menu__article div img {
   margin-top: auto;
   margin-bottom: auto;
-  width: 35%;
-  height: 2rem;
+  width: 23vw;
+  height: 4.8vw;
 }
-.delice_menu__article h3 {
-  width: 30%;
+.delice_menu__article div h3 {
+  width: 30vw;
   text-align: center;
-  font-size: 1rem;
-  font-family: "Segoe Print", "Kalam", sans-serif;
-  padding: 0 1rem;
+  font-size: 1.7rem;
+  font-family: "segoe Print", "Kalam", sans-serif;
+  padding: 0 1rem 1rem 1rem;
 }
 .delice_menu__article .liste {
+  /* liste contenu dans les articles (paragraphe et prix) */
   padding-left: 0;
+}
+.delice_menu__article .liste p {
+  font-size: 1.3rem;
+  font-family: "Segoe Print", "kalam", sans-serif;
 }
 .delice_menu__article .liste li {
   display: flex;
-  width: 80%;
+  width: 60vw;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
@@ -473,21 +495,21 @@ footer h3 {
 /* page le délice des papilles */
 /* palette du gout */
 .palette_title__heading {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  font-size: 2rem;
 }
 
 .palette_menu {
   font-family: "Kaushan Script", sans-serif;
   background-color: #fdfffd;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   margin: 1rem auto 10rem auto;
-  padding: 2rem auto;
   font-weight: normal;
 }
 .palette_menu__article {
-  width: 70vw;
+  width: 80vw;
   margin: auto;
 }
 .palette_menu__article h2 {
@@ -501,27 +523,35 @@ footer h3 {
   margin: 0rem;
 }
 .palette_menu__article div {
+  /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .palette_menu__article div img {
   margin-top: auto;
   margin-bottom: auto;
-  width: 35%;
-  height: 2rem;
+  width: 23vw;
+  height: 4.8vw;
 }
-.palette_menu__article h3 {
-  width: 30%;
+.palette_menu__article div h3 {
+  width: 30vw;
   text-align: center;
-  font-size: 1rem;
-  font-family: "segoe Print";
-  padding: 0 2rem;
+  font-size: 1.7rem;
+  font-family: "segoe Print", "Kalam", sans-serif;
+  padding: 0 1rem 1rem 1rem;
 }
 .palette_menu__article .liste {
+  /* liste contenu dans les articles (paragraphe et prix) */
   padding-left: 0;
+}
+.palette_menu__article .liste p {
+  font-size: 1.3rem;
+  font-family: "Segoe Print", "kalam", sans-serif;
 }
 .palette_menu__article .liste li {
   display: flex;
-  width: 80%;
+  width: 60vw;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
@@ -535,10 +565,6 @@ footer h3 {
   text-align: right;
   font-weight: bold;
 }
-.palette_menu__article p {
-  font-size: 0.8rem;
-  font-family: "segoe Print";
-}
 .palette_menu__article--title {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -548,17 +574,38 @@ footer h3 {
 /* tablette */
 @media screen and (min-width: 768px) {
   html, body {
-    font-size: 100%;
+    font-size: 80%;
+  }
+
+  .note_chic, .delice_palette {
+    display: flex;
+  }
+
+  .note, .chic, .delice, .palette {
+    width: 43vw;
+    height: 60vw;
   }
 
   .note div {
-    padding-top: 1vh;
+    padding-top: 5vh;
   }
 
   .chic div, .delice div, .palette div {
-    padding-top: 10vh;
+    padding-top: 15vh;
+  }
+
+  .note_menu__article div h3 {
+    width: 30%;
+    padding: 0;
+  }
+  .note_menu__article div img {
+    width: 35%;
   }
 }
+.btn {
+  margin-bottom: 12rem;
+}
+
 /* Laptop à partir de 1440px/L */
 @media screen and (min-width: 1440px) {
   html, body {
@@ -591,6 +638,10 @@ footer h3 {
 
   .palette div {
     padding-top: 9.3vw;
+  }
+
+  .btn {
+    margin-bottom: 8rem;
   }
 }
 @media screen and (min-width: 1880px) {
