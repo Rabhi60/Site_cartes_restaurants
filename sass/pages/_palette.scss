@@ -1,0 +1,59 @@
+/* palette du gout */
+
+.palette_title {
+  &__heading {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+}
+
+.palette_menu {
+  font-family: "Kaushan Script", sans-serif;
+  background-color: $color_palette_fond;
+  width: 80vw;
+  height: auto;
+  margin: 1rem auto 10rem auto;
+  padding: 2rem auto;
+  font-weight: normal;
+  &__article {
+    width: 70vw;
+    margin: auto;
+    h2 {
+      background: linear-gradient(
+        to left,
+        $color_palette_font_secondary,
+        $color_palette_font_primary
+      );
+      @include index_h2_degrade;
+      text-align: center;
+      font-size: 4rem;
+      margin: 0rem;
+    }
+    div{
+      display: flex;
+      img{
+        margin-top:auto;
+        margin-bottom: auto;
+        width: 35%;
+        height: 2rem;
+      }
+    }
+    h3 {
+      width: 30%;
+      text-align: center;
+      font-size: 1rem;
+      font-family: "segoe Print";
+      padding: 0 2rem;
+    }
+    .liste{
+        @include liste;
+    }
+    p {
+      font-size: 0.8rem;
+      font-family: "segoe Print";
+    }
+    &--title{
+        @include article_title;
+    }
+  }
+}

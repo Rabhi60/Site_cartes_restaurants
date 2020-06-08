@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* général */
 html,
 body {
   font-size: 62.5%;
@@ -7,6 +6,7 @@ body {
   padding: 0;
 }
 
+/* Partie général */
 /* variables */
 /* box-shadow */
 /* couleur note*/
@@ -14,17 +14,19 @@ body {
 /* couleur delice */
 /* couleur palette */
 /* couleur header, footer et .btn */
+/* Variables */
 /* mixins */
 /* page principal*/
 /* animation zoom avec le hover */
 /* autres pages */
+/* Mixins*/
 /* header */
 header {
   background-color: #569d88;
-  height: 8rem;
+  height: 18vh;
   margin-top: 0;
   text-align: center;
-  line-height: 8rem;
+  line-height: 18vh;
 }
 header a {
   text-decoration: none;
@@ -32,16 +34,17 @@ header a {
 header .heading {
   margin: 0;
   color: #fdcc44;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.15rem;
 }
 
+/* Partie header */
 /* footer */
 footer {
   background-color: #569d88;
-  height: 5rem;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -64,19 +67,29 @@ footer h3 {
 }
 
 @keyframes effet_wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
   25% {
-    transform: translateX(1%);
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
   }
   75% {
-    transform: translateX(-1%);
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
+/* Partie footer */
 /* button */
 .btn {
   width: 35vw;
-  height: 3rem;
-  line-height: 3rem;
-  margin: 1rem auto 6rem auto;
+  height: 6vh;
+  line-height: 6vh;
+  margin: 2.5rem auto 8rem auto;
   text-align: center;
   border-radius: 0.5rem;
   background-color: #569d88;
@@ -85,8 +98,10 @@ footer h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #fdcc44;
+  font-size: 1.2rem;
 }
 
+/* Bouton */
 /* page principal */
 .note, .chic, .delice, .palette {
   width: 80vw;
@@ -103,10 +118,10 @@ footer h3 {
 .note {
   background-color: #fce0dc;
   font-family: "Devonshire", sans-serif;
-  font-size: 1rem;
+  font-size: 2.5rem;
 }
 .note div {
-  padding-top: 13vh;
+  padding-top: 8vh;
 }
 .note h2 {
   color: #390a10;
@@ -123,8 +138,9 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 1.7rem;
+  font-size: 4rem;
   font-weight: lighter;
+  padding-top: 1rem;
   font-weight: bold;
 }
 
@@ -132,6 +148,7 @@ footer h3 {
   background-color: #fff5fe;
   font-family: "Croissant One", sans-serif;
   font-weight: normal;
+  font-size: 1.2rem;
 }
 .chic h2 {
   background: linear-gradient(to left, #915afd, #d9862a);
@@ -146,8 +163,9 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 1.7rem;
+  font-size: 4rem;
   font-weight: lighter;
+  padding-top: 1rem;
   font-family: serif;
   font-weight: bold;
 }
@@ -162,7 +180,7 @@ footer h3 {
   font-weight: lighter;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .delice h2 span {
@@ -171,13 +189,15 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 1.7rem;
+  font-size: 4rem;
   font-weight: lighter;
+  padding-top: 1rem;
 }
 
 .palette {
   background-color: #fdfffd;
   font-family: "Kaushan Script", sans-serif;
+  font-size: 2rem;
 }
 .palette h2 {
   background: linear-gradient(to left, #c0ff7f, #3a9436);
@@ -192,8 +212,9 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 1.7rem;
+  font-size: 4rem;
   font-weight: lighter;
+  padding-top: 1rem;
 }
 
 .index_bloc_a {
@@ -208,32 +229,7 @@ footer h3 {
   opacity: 0.7;
 }
 
-/* pages menus */
-.menu_article_title {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-}
-
-li {
-  list-style: none;
-  margin-left: 0;
-}
-
-p {
-  text-align: left;
-}
-
-.price p {
-  text-align: right;
-  font-weight: bold;
-}
-
-.liste {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0;
-}
-
+/* page principal */
 /* la note enchantee */
 .note_title__heading {
   font-family: Arial, Helvetica, sans-serif, sans-serif;
@@ -265,12 +261,25 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.note_menu__article div {
+  display: flex;
+}
+.note_menu__article div img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 35%;
+  height: 2rem;
+}
 .note_menu__article h3 {
+  width: 30%;
   text-align: center;
   font-size: 1rem;
   font-family: "segoe Print";
+  padding: 0 2rem 2rem 2rem;
 }
 .note_menu__article .title_and_icon {
+  width: auto;
+  text-align: center;
   font-family: "Devonshire", sans-serif;
   font-weight: lighter;
   font-size: 1.7rem;
@@ -280,11 +289,35 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.note_menu__article .liste {
+  padding-left: 0;
+}
+.note_menu__article .liste li {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+.note_menu__article .liste li .content {
+  flex: 6;
+  text-align: left;
+}
+.note_menu__article .liste li .price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+}
 .note_menu__article p {
   font-size: 0.8rem;
   font-family: "segoe Print";
 }
+.note_menu__article--title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
+/* page la note enchentee */
 /* Le chic à la française */
 .chic_title__heading {
   font-family: Arial, sans-serif;
@@ -311,13 +344,44 @@ p {
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
+.chic_menu__article div {
+  display: flex;
+  margin: 0 auto;
+}
+.chic_menu__article div img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 35%;
+  height: 2rem;
+}
 .chic_menu__article h3 {
+  width: 30%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: serif;
+  padding: 0 0.2rem;
+}
+.chic_menu__article .liste {
+  padding-left: 0;
+}
+.chic_menu__article .liste li {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+.chic_menu__article .liste li .content {
+  flex: 6;
+  text-align: left;
+}
+.chic_menu__article .liste li .price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
 }
 .chic_menu__article p {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-family: serif;
 }
 .chic_menu__article--one {
@@ -329,7 +393,12 @@ p {
 .chic_menu__article--three {
   color: #915afd;
 }
+.chic_menu__article--title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
+/* page le chic à la française */
 /* Le delice des papilles */
 .delice_title__heading {
   font-family: Arial, sans-serif;
@@ -338,9 +407,9 @@ p {
 
 .delice_menu {
   font-family: "Dancing Script", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #eef0f0;
   width: 80vw;
-  height: 90vh;
+  height: auto;
   margin: 1rem auto 10rem auto;
   font-weight: lighter;
 }
@@ -357,16 +426,51 @@ p {
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
+.delice_menu__article div {
+  display: flex;
+}
+.delice_menu__article div img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 35%;
+  height: 2rem;
+}
 .delice_menu__article h3 {
+  width: 30%;
   text-align: center;
   font-size: 1rem;
   font-family: "Segoe Print", "Kalam", sans-serif;
+  padding: 0 1rem;
+}
+.delice_menu__article .liste {
+  padding-left: 0;
+}
+.delice_menu__article .liste li {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+.delice_menu__article .liste li .content {
+  flex: 6;
+  text-align: left;
+}
+.delice_menu__article .liste li .price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
 }
 .delice_menu__article p {
   font-size: 1rem;
   font-family: "Segoe Print", "kalam", sans-serif;
 }
+.delice_menu__article--title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
+/* page le délice des papilles */
 /* palette du gout */
 .palette_title__heading {
   font-family: Arial, sans-serif;
@@ -377,12 +481,14 @@ p {
   font-family: "Kaushan Script", sans-serif;
   background-color: #fdfffd;
   width: 80vw;
-  height: 90vh;
+  height: auto;
   margin: 1rem auto 10rem auto;
+  padding: 2rem auto;
+  font-weight: normal;
 }
 .palette_menu__article {
   width: 70vw;
-  margin: 2rem auto 3rem auto;
+  margin: auto;
 }
 .palette_menu__article h2 {
   background: linear-gradient(to left, #c0ff7f, #3a9436);
@@ -392,17 +498,53 @@ p {
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-size: 4rem;
+  margin: 0rem;
+}
+.palette_menu__article div {
+  display: flex;
+}
+.palette_menu__article div img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 35%;
+  height: 2rem;
 }
 .palette_menu__article h3 {
+  width: 30%;
   text-align: center;
   font-size: 1rem;
   font-family: "segoe Print";
+  padding: 0 2rem;
+}
+.palette_menu__article .liste {
+  padding-left: 0;
+}
+.palette_menu__article .liste li {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+.palette_menu__article .liste li .content {
+  flex: 6;
+  text-align: left;
+}
+.palette_menu__article .liste li .price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
 }
 .palette_menu__article p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: "segoe Print";
 }
+.palette_menu__article--title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
+/* page la palette du goût */
 /* tablette */
 @media screen and (min-width: 768px) {
   html, body {
@@ -410,34 +552,52 @@ p {
   }
 
   .note div {
-    padding-top: 9vh;
+    padding-top: 1vh;
   }
 
   .chic div, .delice div, .palette div {
-    padding-top: 13vh;
+    padding-top: 10vh;
   }
 }
 /* Laptop à partir de 1440px/L */
 @media screen and (min-width: 1440px) {
+  html, body {
+    font-size: 100%;
+  }
+
   .note_chic, .delice_palette {
     margin-top: 3rem;
     display: flex;
     margin: 3rem auto;
-    width: 60vw;
+    width: 70vw;
   }
 
   .note, .chic, .delice, .palette {
-    width: 25vw;
-    height: 70vh;
+    width: 30vw;
+    height: 36vw;
   }
 
   .note div {
-    padding-top: 20vh;
+    padding-top: 6vw;
   }
 
-  .chic div, .delice div, .palette div {
-    padding-top: 22vh;
+  .chic div {
+    padding-top: 12vw;
+  }
+
+  .delice div {
+    padding-top: 9vw;
+  }
+
+  .palette div {
+    padding-top: 9.3vw;
   }
 }
+@media screen and (min-width: 1880px) {
+  html, body {
+    font-size: 130%;
+  }
+}
+/* media query différents viewport */
 
 /*# sourceMappingURL=style.css.map */

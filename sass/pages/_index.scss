@@ -1,0 +1,104 @@
+/* page principal */
+
+.note, .chic, .delice, .palette {
+    @include base_index_article;
+  }
+  
+  .note {
+    background-color: $color_note_fond;
+    font-family: "Devonshire", sans-serif;
+    font-size: 2.5rem;
+    div{
+      padding-top: 8vh;
+    }
+  
+    h2 {
+      color: $color_note_font;
+      font-weight: normal;
+  
+      .fa-music {
+        background: linear-gradient(
+          to left,
+          $color_note_icon_secondary,
+          $color_note_icon_primary
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+  
+      span {
+        background-color: $color_note_font;
+        @include span_webkit_note_chic_palette;
+        font-weight: bold;
+    
+      }
+    }
+  }
+  
+  .chic {
+    background-color: $color_chic_fond;
+    font-family: "Croissant One", sans-serif;
+    font-weight: normal;
+    font-size: 1.2rem;
+    h2 {
+      background: linear-gradient(
+        to left,
+        $color_chic_font_secondary,
+        $color_chic_font_primary
+      );
+      @include index_h2_degrade;
+  
+      span {
+        background: $color_chic_font_primary;
+        @include span_webkit_note_chic_palette;
+        font-family: serif;
+        font-weight: bold;
+        
+      }
+    }
+  }
+  
+  .delice {
+    background-color: $color_delice_fond;
+    font-family: "Dancing Script", sans-serif;
+    h2 {
+      background: linear-gradient(
+        to right,
+        $color_delice_font_secondary,
+        $color_delice_font_primary
+      );
+      @include index_h2_degrade;
+      font-size: 2.5rem;
+      font-weight: 700;
+      span {
+        background: $color_delice_font_primary;
+        @include span_webkit_note_chic_palette;
+      }
+    }
+  }
+  
+  .palette {
+    background-color: $color_palette_fond;
+    font-family: "Kaushan Script", sans-serif;
+    font-size: 2rem;
+    h2 {
+      background: linear-gradient(
+        to left,
+        $color_palette_font_secondary,
+        $color_palette_font_primary
+      );
+      @include index_h2_degrade;
+      span {
+        background: $color_palette_font_primary;
+        @include span_webkit_note_chic_palette;
+      }
+    }
+  }
+  
+  .index_bloc_a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    @include zoom_and_opacity_hover;
+  }

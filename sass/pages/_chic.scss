@@ -1,0 +1,68 @@
+/* Le chic à la française */
+
+.chic_title {
+  &__heading {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+}
+
+.chic_menu {
+  font-family: "Croissant One", sans-serif;
+  background-color: $color_chic_fond;
+  width: 80vw;
+  height: auto;
+  margin: 1rem auto 10rem auto;
+  font-weight: lighter;
+  &__article {
+    width: 70vw;
+    margin: auto;
+
+    h2 {
+      background: linear-gradient(
+        to left,
+        $color_chic_font_secondary,
+        $color_chic_font_primary
+      );
+      @include index_h2_degrade;
+      text-align: center;
+    }
+    div{
+      display: flex;
+      margin: 0 auto;
+      img{
+        margin-top:auto;
+        margin-bottom: auto;
+        width: 35%;
+        height: 2rem;
+      }
+    }
+    h3 {
+      width: 30%;
+      text-align: center;
+      font-size: 1rem;
+      font-family: serif;
+      padding: 0 0.2rem;
+    }
+    .liste{
+      @include liste;
+  }
+    p {
+      font-size: 0.9rem;
+      font-family: serif;
+    }
+
+    &--one {
+      color: $color_chic_font_primary;
+    }
+    &--two {
+      color: $color_chic_font_plaisir_des_papilles;
+    }
+    &--three {
+      color: $color_chic_font_secondary;
+    }
+    &--title{
+      @include article_title;
+    }
+  }
+}

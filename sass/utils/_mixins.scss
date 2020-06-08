@@ -19,9 +19,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 1.7rem;
+  font-size: 4rem;
   font-weight: lighter;
+  padding-top: 1rem;
 }
+
 @mixin span_font-size {
   font-size: 2rem;
 }
@@ -44,3 +46,32 @@
 }
 
 /* autres pages */
+
+@mixin article_title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+} 
+
+
+@mixin liste {
+  padding-left: 0;
+  li{
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+
+    .content{
+      flex: 6;
+      text-align: left;
+    }
+    .price{
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+  }
+ }
+}
+
+ 

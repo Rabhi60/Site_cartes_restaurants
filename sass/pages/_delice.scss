@@ -1,0 +1,58 @@
+/* Le delice des papilles */
+
+.delice_title {
+  &__heading {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+}
+
+.delice_menu {
+  font-family: "Dancing Script", sans-serif;
+  background-color: $color_delice_fond_menu;
+  width: 80vw;
+  height: auto;
+  margin: 1rem auto 10rem auto;
+  font-weight: lighter;
+  &__article {
+    width: 70vw;
+    margin: auto;
+    h2 {
+      font-size: 4rem;
+      background: linear-gradient(
+        to right,
+        $color_delice_font_secondary,
+        $color_delice_font_primary
+      );
+      @include index_h2_degrade;
+      text-align: center;
+    }
+    div{
+      display: flex;
+      img{
+        margin-top:auto;
+        margin-bottom: auto;
+        width: 35%;
+        height: 2rem;
+        
+      }
+    }
+    h3 {
+      width: 30%;
+      text-align: center;
+      font-size: 1rem;
+      font-family: "Segoe Print", "Kalam", sans-serif;
+      padding: 0 1rem;
+    }
+    .liste{
+      @include liste;
+  }
+    p {
+      font-size: 1rem;
+      font-family: "Segoe Print", "kalam", sans-serif;
+    }
+    &--title{
+      @include article_title;
+    }
+  }
+}
