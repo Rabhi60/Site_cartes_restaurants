@@ -356,7 +356,6 @@ footer h3 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  font-family: serif;
 }
 .chic_menu__article div img {
   margin-top: auto;
@@ -371,10 +370,12 @@ footer h3 {
   font-family: "segoe Print", "Kalam", sans-serif;
   padding: 0 1rem 1rem 1rem;
 }
+.chic_menu__article div h3 {
+  font-family: serif;
+}
 .chic_menu__article .liste {
   /* liste contenu dans les articles (paragraphe et prix) */
   padding-left: 0;
-  font-family: serif;
 }
 .chic_menu__article .liste p {
   font-size: 1.3rem;
@@ -395,6 +396,9 @@ footer h3 {
   flex: 1;
   text-align: right;
   font-weight: bold;
+}
+.chic_menu__article .liste p {
+  font-family: serif;
 }
 .chic_menu__article--one {
   color: #d9862a;

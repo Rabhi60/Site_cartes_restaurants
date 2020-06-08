@@ -30,12 +30,17 @@
     }
     div{
       @include div_h3_trait;
-      font-family: serif;
+      h3{
+        font-family: serif;
+      }
     }
     
     .liste{
       @include liste;
-      font-family: serif;
+      p{
+        font-family: serif;
+      }
+      
   }
 
     &--one {
