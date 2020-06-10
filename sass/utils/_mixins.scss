@@ -1,8 +1,17 @@
 /* mixins */
 
-/* page principal*/
+/* Partie générale utilisation des mixins dans plusieurs, page principale et autres */
 
-@mixin base_index_article {
+@mixin h2_degrade { /* Effet dégradé pour la page index et les autres pages */
+  padding: 0.2rem;
+  font-weight: lighter;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* page principal */
+
+@mixin base_index_article {  /* Structure de base des articles dans la page index */
   width: 80vw;
   height:50vw * 2 ;
   box-shadow: 0rem 0rem 0.5rem $color-box-shadow;
@@ -14,8 +23,7 @@
   }
 }
 
-@mixin span_webkit_note_chic_palette {
-  /* Permet de choisir une autre couleur pour le mot menu */
+@mixin span_webkit_note_chic_palette {  /* Permet de choisir une autre couleur pour le mot menu */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
@@ -24,20 +32,15 @@
   padding-top: 1rem;
 }
 
-@mixin span_font-size {
+@mixin span_font-size { /* Taille des span sauf pour chic */
   font-size: 2rem;
 }
 
-@mixin index_h2_degrade {
-  padding: 0.2rem;
-  font-weight: lighter;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-/* animation zoom avec le hover */
 
-@mixin zoom_and_opacity_hover {
+
+
+@mixin zoom_and_opacity_hover { /* (Page principale) animation zoom avec le hover */
   transition: all 1000ms;
   &:hover {
     transform: scale(1.2);
@@ -45,20 +48,81 @@
   }
 }
 
-/* autres pages */
+/* Autres pages */
 
-@mixin article_title {
+@mixin base_section_menu { /* Structure de base de la section */
+  width: 90vw;
+  height: auto;
+  margin: 1rem auto 10rem auto;
+  font-weight: normal;
+}
+
+@mixin base_article{ /* Structure de base des articles */
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+}
+
+@mixin article_frist_title_h2{ /* Premier titre h2 */
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@mixin article_second_title_h2 { /* Deuxième titre h2 */
   padding-top: 2rem;
   padding-bottom: 1rem;
 } 
 
+@mixin div_h3_trait { /* div contenant les h3 (entree, plat et dessert) avec les traits*/
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    img{
+      margin-top:auto;
+      margin-bottom: auto;
+      width: 23vw;
+      height: 30vw * 0.16; 
+    }
+
+    h3 {
+      
+      font-size: 1.7rem;
+      font-family: "segoe Print", "Kalam", sans-serif;
+      //padding: 0 1rem 1rem 1rem;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background:black;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: .3s ease-in-out;
+      }
+      &:hover{
+        &::after{
+          transform: scaleX(1);
+        }
+      }
+    }
+    
+  
+  }
+
 
 @mixin liste { /* liste contenu dans les articles (paragraphe et prix) */
   padding-left: 0;
+
   p {
     font-size: 1.3rem;
     font-family: "Segoe Print", "kalam", sans-serif;
   }
+
   li{
     display: flex;
     width: 60vw;
@@ -70,32 +134,14 @@
       flex: 6;
       text-align: left;
     }
+
     .price{
     flex: 1;
     text-align: right;
     font-weight: bold;
+    }
   }
- }
 }
 
-@mixin div_h3_trait { /* div contenant les h3 (entree, plat et dessert) avec les traits*/
-  display: flex;
-      margin-left: auto;
-      margin-right: auto;
-      img{
-        margin-top:auto;
-        margin-bottom: auto;
-        width: 23vw;
-        height: 30vw * 0.16;
-        
-      }
-      h3 {
-        width: 30vw;
-        text-align: center;
-        font-size: 1.7rem;
-        font-family: "segoe Print", "Kalam", sans-serif;
-        padding: 0 1rem 1rem 1rem;
-      
-      }
-}
+
  

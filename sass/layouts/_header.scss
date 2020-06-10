@@ -2,11 +2,12 @@
 
 header {
   background-color: $green;
-  height: 18vh;
+  height: auto;
   margin-top: 0;
   text-align: center;
-  line-height: 18vh;
-
+  line-height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   a {
     text-decoration: none;
   }

@@ -2,9 +2,7 @@
 
 .note_title {
   &__heading {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 2rem;
+    @include article_frist_title_h2;
   }
 }
 
@@ -12,13 +10,9 @@
   font-family: "Devonshire", sans-serif;
   background-color: $color_note_fond;
   color: $color_note_font;
-  width: 90vw;
-  height: auto;
-  margin: 1rem auto 10rem auto;
-  font-weight: normal;
+  @include base_section_menu;
   &__article {
-    width: 80vw;
-    margin: auto;
+    @include base_article;
     h2 {
       text-align: center;
       font-weight: lighter;
@@ -35,6 +29,9 @@
     }
     div{
       @include div_h3_trait;
+      h3::after{
+        background: $color_note_font;
+      }
     }
     
     .title_and_icon {
@@ -58,8 +55,8 @@
       @include liste;
   }
 
-    &--title{
-      @include article_title;
-    }
+  &--second_title_h2{
+    @include article_second_title_h2;
+  }
   }
 }

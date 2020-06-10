@@ -2,29 +2,23 @@
 
 .palette_title {
   &__heading {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 2rem;
+   @include article_frist_title_h2;
   }
 }
 
 .palette_menu {
   font-family: "Kaushan Script", sans-serif;
   background-color: $color_palette_fond;
-  width: 90vw;
-  height: auto;
-  margin: 1rem auto 10rem auto;
-  font-weight: normal;
+  @include base_section_menu;
   &__article {
-    width: 80vw;
-    margin: auto;
+   @include base_article;
     h2 {
       background: linear-gradient(
         to left,
         $color_palette_font_secondary,
         $color_palette_font_primary
       );
-      @include index_h2_degrade;
+      @include h2_degrade;
       text-align: center;
       font-size: 4rem;
       margin: 0rem;
@@ -32,12 +26,13 @@
     }
     div{
       @include div_h3_trait;
+     
     }
     .liste{
         @include liste;
     }
-    &--title{
-        @include article_title;
+    &--second_title_h2{
+      @include article_second_title_h2;
     }
   }
 }

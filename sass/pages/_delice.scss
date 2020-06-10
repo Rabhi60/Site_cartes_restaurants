@@ -2,22 +2,16 @@
 
 .delice_title {
   &__heading {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    font-size: 2rem;
+    @include article_frist_title_h2;
   }
 }
 
 .delice_menu {
   font-family: "Dancing Script", sans-serif;
   background-color: $color_delice_fond_menu;
-  width: 90vw;
-  height: auto;
-  margin: 1rem auto 10rem auto;
-  font-weight: lighter;
+  @include base_section_menu;
   &__article {
-    width: 80vw;
-    margin: auto;
+    @include base_article;
     h2 {
       font-size: 4rem;
       background: linear-gradient(
@@ -25,8 +19,8 @@
         $color_delice_font_secondary,
         $color_delice_font_primary
       );
-      @include index_h2_degrade;
-      text-align: center;
+      @include h2_degrade;
+     
     }
     div{
       @include div_h3_trait;
@@ -39,8 +33,8 @@
       font-size: 1rem;
       font-family: "Segoe Print", "kalam", sans-serif;
     }
-    &--title{
-      @include article_title;
+    &--second_title_h2{
+      @include article_second_title_h2;
     }
   }
 }

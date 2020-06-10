@@ -20,25 +20,28 @@
     div{
     padding-top: 15vh;
     
-}
   }
-  .note_menu{
+  }
+  .note_menu, .chic_menu, .palette_menu, .delice_menu{
     &__article{
       div{
         h3{
-          width: 30%;
           padding: 0;
         }
         img{
-          width: 35%;
+          width: 25vw;
         }
       }
     }
   }
+
+  .btn{
+    margin-bottom: 11rem;
+    height: 7vh;
+    line-height: 7vh;
+  }
 }
-.btn{
-  margin-bottom: 12rem;
-}
+
 
 /* Laptop à partir de 1440px/L */
 
@@ -78,8 +81,12 @@
   }
   .btn{
     margin-bottom: 8rem;
+    height: 8vh;
+    line-height: 8vh;
   }
 }
+
+/* Laptop à partir de 1880 px */
 
 @media screen and (min-width: 1880px){
   html, body{

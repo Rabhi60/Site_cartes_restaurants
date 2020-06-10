@@ -46,7 +46,7 @@
         $color_chic_font_secondary,
         $color_chic_font_primary
       );
-      @include index_h2_degrade;
+      @include h2_degrade;
   
       span {
         background: $color_chic_font_primary;
@@ -67,7 +67,7 @@
         $color_delice_font_secondary,
         $color_delice_font_primary
       );
-      @include index_h2_degrade;
+      @include h2_degrade;
       font-size: 2.5rem;
       font-weight: 700;
       span {
@@ -87,7 +87,7 @@
         $color_palette_font_secondary,
         $color_palette_font_primary
       );
-      @include index_h2_degrade;
+      @include h2_degrade;
       span {
         background: $color_palette_font_primary;
         @include span_webkit_note_chic_palette;

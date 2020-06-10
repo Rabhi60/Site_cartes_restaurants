@@ -1,20 +1,18 @@
 /* button */
 
 .btn {
-  
-  
-  width: 35vw;
-  height: 6vh;
-  line-height: 6vh;
+  width: 45vw;
+  height: 5vh;
+  line-height: 5vh;
   margin: 2.5rem  auto 8rem auto;
   text-align: center;
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
   background-color: $green;
   h2{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: $yellow;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   }
 }
 
