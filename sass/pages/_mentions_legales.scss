@@ -1,0 +1,41 @@
+/* Mentions Légales */
+
+.mention{
+    margin: 3rem auto 10rem auto;
+    width: 90vw;
+    background: #dddddd;
+    margin-bottom: 10rem;
+    .heading{
+        padding-top: 2rem;
+        color: $yellow;
+        font-size: 3rem;
+        text-align: center;
+        text-shadow: 1px 1px 1px $green;
+        
+    }
+    article{
+        h2{
+            font-size: 2rem;
+            padding: 0.7rem;
+            color: $green;
+        }
+        h3{
+            font-size: 1.5rem;
+            padding: 0.7rem;
+            color: $green;
+        }
+        p{
+        font-size: 1rem;
+        text-align: justify;
+        padding: 1rem;
+         }
+        li{
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+    .bold{
+        font-weight: bold;
+        text-align: left;
+    }
+}

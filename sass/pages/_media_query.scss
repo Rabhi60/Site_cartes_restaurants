@@ -1,4 +1,4 @@
-
+/* Media Query */
 
 
 
@@ -6,26 +6,17 @@
 
 @media screen and (min-width:768px){
   html,body{
-    font-size:80%;
+    font-size:70%;
   }
   .note_chic, .delice_palette{
     display: flex;
+    margin-top: 3rem;
   }
   .note, .chic, .delice, .palette{
     width: 43vw;
-    height:$size * 2 ;
+    height: 50vh;
   }
-  .note{
-    div{
-      padding-top: 5vh;
-    }
-  }
-  .chic, .delice, .palette{
-    div{
-    padding-top: 15vh;
-    
-  }
-  }
+  
   .note_menu, .chic_menu, .palette_menu, .delice_menu{
     &__article{
       div{
@@ -45,62 +36,89 @@
     height: 7vh;
     line-height: 7vh;
     h2{
-      padding-left: 30%;
+      padding-left: 100vw * 0.15;
     }
   }
 }
 
 
-/* Laptop à partir de 1440px/L */
+/* Laptop à partir de 1024px */
 
-@media screen and (min-width: 1440px){
-  html,body{
-    font-size: 100%;
-  }
+@media screen and (min-width: 1024px){
+
   .note_chic, .delice_palette{
-    margin-top: 3rem;
     display: flex;
     margin: 3rem auto ;
     width: 70vw;
   }
   .note, .chic, .delice, .palette{
     width: $size;
-    height:$size * 1.2 ;
+    height: 60vh;
   }
-  .note{
+ 
+  .chic, .delice {
     div{
-      padding-top: $size * 0.2;
-    }
-  }
-  .chic {
-    div{
-      padding-top: $size* 0.4;
-    }
-  }
-  .delice{
-    div{
-      padding-top: $size * 0.3;
+      padding-top: 20vh;
     }
   }
   .palette{
     div{
-      padding-top: $size * 0.31;
+      padding-top: 21vh;
     }
   }
   .btn{
     margin-bottom: 8rem;
     height: 8vh;
     line-height: 8vh;
+    width: 33vw;
     h2{
-      padding-left: 35%;
+      padding-left: 100vw * 0.09;
     }
   }
 }
 
-/* Laptop à partir de 1880 px */
+/* Laptop à partir de 1440 px */
 
+@media screen and (min-width: 1440px){
+  html,body{
+    font-size: 100%;
+  }
+  .note, .chic, .delice, .palette{
+    height: 70vh;
+  }
+}
+
+
+/* Laptop à partir de 1880px */
 @media screen and (min-width: 1880px){
   html, body{
-    font-size: 130%;
+    font-size: 120%;
+  }
+  .note, .chic, .delice, .palette{
+    width: 30vw;
+    height: 80vh;
+  }
+  
+  .note {
+    div{
+      padding-top: 22vh;
+    }
+  }
+  .chic, .delice {
+    div{
+      padding-top: 27vh;
+    }
+  }
+  .palette{
+    div{
+      padding-top: 29vh;
+    }
+  }
+
+  .btn{
+    height: 9vh;
+    h2{
+      padding-left: 100vw * 0.09;
+    }
   }
 }

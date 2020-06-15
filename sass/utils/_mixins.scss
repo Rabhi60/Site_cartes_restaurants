@@ -11,15 +11,15 @@
 
 /* page principal */
 
-@mixin base_index_article {  /* Structure de base des articles dans la page index */
+@mixin base_index_article{  /* Structure de base des articles dans la page index */
   width: 80vw;
-  height:50vw * 2 ;
+  height: 60vh;
   box-shadow: 0rem 0rem 0.5rem $color-box-shadow;
   margin: 1rem auto;
   font-size: 1rem;
   text-align: center;
   div{
-    padding-top: 17vh;
+    padding-top: 18vh;
   }
 }
 
@@ -27,13 +27,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: lighter;
-  padding-top: 1rem;
+  display: block;
+  padding: 2rem;
 }
 
 @mixin span_font-size { /* Taille des span sauf pour chic */
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 

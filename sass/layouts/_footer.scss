@@ -29,18 +29,25 @@ footer {
 }
 @keyframes effet_wiggle {
   0%{
-    transform: rotate(0deg);
+    transform: translate(0%,0%);
   }
+  10%{
+    transform: translate(-5%,5%);
+  } 
   25% {
-    transform: rotate(15deg);
+    transform: translate(5%,-5%);
   }
   50%{
-    transform: rotate(0deg);
+    transform: translate(-5%,5%);
   }
   75% {
-    transform: rotate(-15deg);
+    transform: translate(-5%,-5%);
+
+  }
+  95%{
+    transform: translate(-5%,-5%);
   }
   100%{
-    transform: rotate(0deg);
+    transform: translate(0%,0%);
   }
 }

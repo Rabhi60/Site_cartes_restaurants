@@ -27,7 +27,6 @@ header {
   height: auto;
   margin-top: 0;
   text-align: center;
-  line-height: auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -73,19 +72,25 @@ footer h3 {
 
 @keyframes effet_wiggle {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0%, 0%);
+  }
+  10% {
+    transform: translate(-5%, 5%);
   }
   25% {
-    transform: rotate(15deg);
+    transform: translate(5%, -5%);
   }
   50% {
-    transform: rotate(0deg);
+    transform: translate(-5%, 5%);
   }
   75% {
-    transform: rotate(-15deg);
+    transform: translate(-5%, -5%);
+  }
+  95% {
+    transform: translate(-5%, -5%);
   }
   100% {
-    transform: rotate(0deg);
+    transform: translate(0%, 0%);
   }
 }
 /* Partie footer */
@@ -133,23 +138,23 @@ footer h3 {
 .note, .chic, .delice, .palette {
   /* Structure de base des articles dans la page index */
   width: 80vw;
-  height: 100vw;
+  height: 60vh;
   box-shadow: 0rem 0rem 0.5rem #b6b2b2;
   margin: 1rem auto;
   font-size: 1rem;
   text-align: center;
 }
 .note div, .chic div, .delice div, .palette div {
-  padding-top: 17vh;
+  padding-top: 18vh;
 }
 
 .note {
   background-color: #fce0dc;
   font-family: "Devonshire", sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .note div {
-  padding-top: 8vh;
+  padding-top: 13vh;
 }
 .note h2 {
   color: #390a10;
@@ -166,9 +171,10 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: lighter;
-  padding-top: 1rem;
+  display: block;
+  padding: 2rem;
   font-weight: bold;
 }
 
@@ -192,9 +198,10 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: lighter;
-  padding-top: 1rem;
+  display: block;
+  padding: 2rem;
   font-family: serif;
   font-weight: bold;
 }
@@ -219,9 +226,10 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: lighter;
-  padding-top: 1rem;
+  display: block;
+  padding: 2rem;
 }
 
 .palette {
@@ -243,9 +251,10 @@ footer h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Segoe Print", "kalam", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: lighter;
-  padding-top: 1rem;
+  display: block;
+  padding: 2rem;
 }
 
 .index_bloc_a {
@@ -695,27 +704,60 @@ footer h3 {
 }
 
 /* page la palette du goût */
+/* Mentions Légales */
+.mention {
+  margin: 3rem auto 10rem auto;
+  width: 90vw;
+  background: #dddddd;
+  margin-bottom: 10rem;
+}
+.mention .heading {
+  padding-top: 2rem;
+  color: #fdcc44;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 1px 1px 1px #569d88;
+}
+.mention article h2 {
+  font-size: 2rem;
+  padding: 0.7rem;
+  color: #569d88;
+}
+.mention article h3 {
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  color: #569d88;
+}
+.mention article p {
+  font-size: 1rem;
+  text-align: justify;
+  padding: 1rem;
+}
+.mention article li {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+.mention .bold {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Mentions Légales */
+/* Media Query */
 /* tablette */
 @media screen and (min-width: 768px) {
   html, body {
-    font-size: 80%;
+    font-size: 70%;
   }
 
   .note_chic, .delice_palette {
     display: flex;
+    margin-top: 3rem;
   }
 
   .note, .chic, .delice, .palette {
     width: 43vw;
-    height: 60vw;
-  }
-
-  .note div {
-    padding-top: 5vh;
-  }
-
-  .chic div, .delice div, .palette div {
-    padding-top: 15vh;
+    height: 50vh;
   }
 
   .note_menu__article div h3, .chic_menu__article div h3, .palette_menu__article div h3, .delice_menu__article div h3 {
@@ -732,17 +774,12 @@ footer h3 {
     line-height: 7vh;
   }
   .btn h2 {
-    padding-left: 30%;
+    padding-left: 15vw;
   }
 }
-/* Laptop à partir de 1440px/L */
-@media screen and (min-width: 1440px) {
-  html, body {
-    font-size: 100%;
-  }
-
+/* Laptop à partir de 1024px */
+@media screen and (min-width: 1024px) {
   .note_chic, .delice_palette {
-    margin-top: 3rem;
     display: flex;
     margin: 3rem auto;
     width: 70vw;
@@ -750,38 +787,65 @@ footer h3 {
 
   .note, .chic, .delice, .palette {
     width: 30vw;
-    height: 36vw;
+    height: 60vh;
   }
 
-  .note div {
-    padding-top: 6vw;
-  }
-
-  .chic div {
-    padding-top: 12vw;
-  }
-
-  .delice div {
-    padding-top: 9vw;
+  .chic div, .delice div {
+    padding-top: 20vh;
   }
 
   .palette div {
-    padding-top: 9.3vw;
+    padding-top: 21vh;
   }
 
   .btn {
     margin-bottom: 8rem;
     height: 8vh;
     line-height: 8vh;
+    width: 33vw;
   }
   .btn h2 {
-    padding-left: 35%;
+    padding-left: 9vw;
   }
 }
-/* Laptop à partir de 1880 px */
+/* Laptop à partir de 1440 px */
+@media screen and (min-width: 1440px) {
+  html, body {
+    font-size: 100%;
+  }
+
+  .note, .chic, .delice, .palette {
+    height: 70vh;
+  }
+}
+/* Laptop à partir de 1880px */
 @media screen and (min-width: 1880px) {
   html, body {
-    font-size: 130%;
+    font-size: 120%;
+  }
+
+  .note, .chic, .delice, .palette {
+    width: 30vw;
+    height: 80vh;
+  }
+
+  .note div {
+    padding-top: 22vh;
+  }
+
+  .chic div, .delice div {
+    padding-top: 27vh;
+  }
+
+  .palette div {
+    padding-top: 29vh;
+  }
+
+  .btn {
+    height: 9vh;
+  }
+  .btn h2 {
+    padding-left: 9vw;
   }
 }
 /* media query différents viewport */
