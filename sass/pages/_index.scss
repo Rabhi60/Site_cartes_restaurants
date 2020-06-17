@@ -1,9 +1,22 @@
 /* page principal */
 
-.note, .chic, .delice, .palette {
+
+/* base en commun entre les differents menus de la page principal */
+.note, .chic, .delice, .palette { 
     @include base_index_article;
   }
-  
+
+/* Permet de rendre tout le bloc selectionnable */
+    .index_bloc_a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      @include zoom_and_opacity_hover;
+    }
+
+
+/* Page Principale - Partie note */
   .note {
     background-color: $color_note_fond;
     font-family: "Devonshire", sans-serif;
@@ -35,6 +48,7 @@
     }
   }
   
+/* Page Principale - Partie chic */
   .chic {
     background-color: $color_chic_fond;
     font-family: "Croissant One", sans-serif;
@@ -58,6 +72,7 @@
     }
   }
   
+/* Page Principale - Partie délice */
   .delice {
     background-color: $color_delice_fond;
     font-family: "Dancing Script", sans-serif;
@@ -77,6 +92,7 @@
     }
   }
   
+/* Page Principale - Partie palette */
   .palette {
     background-color: $color_palette_fond;
     font-family: "Kaushan Script", sans-serif;
@@ -93,12 +109,4 @@
         @include span_webkit_note_chic_palette;
       }
     }
-  }
-  
-  .index_bloc_a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    @include zoom_and_opacity_hover;
   }

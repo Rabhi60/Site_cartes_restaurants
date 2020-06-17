@@ -1,23 +1,25 @@
 /* la note enchantee */
 
+/* Section Premier titre */
 .note_title {
   &__heading {
     @include article_frist_title_h2;
   }
 }
 
+/* Section Carte*/
 .note_menu {
   font-family: "Devonshire", sans-serif;
   background-color: $color_note_fond;
   color: $color_note_font;
-  @include base_section_menu;
+  @include base_section_menu;  
   &__article {
-    @include base_article;
+    @include base_article; 
     h2 {
       text-align: center;
       font-weight: lighter;
       font-size: 3rem;
-      .fa-music {
+      .fa-music { /* icon */
         background: linear-gradient(
           to left,
           $color_note_icon_secondary,
@@ -27,7 +29,7 @@
         -webkit-text-fill-color: transparent;
       }
     }
-    div{
+    div{ /* Div qui comprend les titres des plats avec l'effet de soulignement */
       @include div_h3_trait;
       h3::after{
         background: $color_note_font;
@@ -55,7 +57,7 @@
       @include liste;
   }
 
-  &--second_title_h2{
+  &--second_title_h2{/*Titre dans la carte */
     @include article_second_title_h2;
   }
   }

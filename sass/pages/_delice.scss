@@ -1,11 +1,13 @@
 /* Le delice des papilles */
 
+/* Section Premier titre */
 .delice_title {
   &__heading {
     @include article_frist_title_h2;
   }
 }
 
+/* Section Carte*/
 .delice_menu {
   font-family: "Dancing Script", sans-serif;
   background-color: $color_delice_fond_menu;
@@ -22,7 +24,7 @@
       @include h2_degrade;
      
     }
-    div{
+    div{/* Div qui comprend les titres des plats avec l'effet de soulignement */
       @include div_h3_trait;
     }
     
@@ -33,7 +35,7 @@
       font-size: 1rem;
       font-family: "Segoe Print", "kalam", sans-serif;
     }
-    &--second_title_h2{
+    &--second_title_h2{/*Titre dans la carte */
       @include article_second_title_h2;
     }
   }

@@ -1,11 +1,13 @@
 /* Le chic à la française */
 
+/* Section Premier titre */
 .chic_title {
   &__heading {
     @include article_frist_title_h2;
   }
 }
 
+/* Section Carte*/
 .chic_menu {
   font-family: "Croissant One", sans-serif;
   background-color: $color_chic_fond;
@@ -22,7 +24,7 @@
       );
       @include h2_degrade;
     }
-    div{
+    div{/* Div qui comprend les titres des plats avec l'effet de soulignement */
 
       @include div_h3_trait;
       h3{
@@ -37,7 +39,7 @@
       }
   }
 
-    &--one {
+    &--one {/* Couleur pour l'article 1 (entrée) avec son effet de souligement */
       color: $color_chic_font_primary;
       div{
         h3::after{
@@ -45,7 +47,7 @@
         }
       }
     }
-    &--two {
+    &--two {/* Couleur pour l'article 2 (plat)avec son effet de souligement */
       color: $color_chic_font_plaisir_des_papilles;
       div{
         h3::after{
@@ -53,7 +55,7 @@
         }
       }
     }
-    &--three {
+    &--three {/* Couleur pour l'article 3 (dessert) avec son effet de souligement */
       color: $color_chic_font_secondary;
       div{
         h3::after{
@@ -61,7 +63,7 @@
         }
       }
     }
-    &--second_title_h2{
+    &--second_title_h2{/*Titre dans la carte */
       @include article_second_title_h2;
     }
   }

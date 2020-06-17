@@ -1,11 +1,13 @@
 /* palette du gout */
 
+/* Section Premier titre */
 .palette_title {
   &__heading {
    @include article_frist_title_h2;
   }
 }
 
+/* Section Carte*/
 .palette_menu {
   font-family: "Kaushan Script", sans-serif;
   background-color: $color_palette_fond;
@@ -24,14 +26,14 @@
       margin: 0rem;
       
     }
-    div{
+    div{ /* Div qui comprend les titres des plats avec l'effet de soulignement */
       @include div_h3_trait;
      
     }
     .liste{
         @include liste;
     }
-    &--second_title_h2{
+    &--second_title_h2{ /*Titre dans la carte */
       @include article_second_title_h2;
     }
   }

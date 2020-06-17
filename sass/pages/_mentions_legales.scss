@@ -5,7 +5,7 @@
     width: 90vw;
     background: #dddddd;
     margin-bottom: 10rem;
-    .heading{
+    &__heading{
         padding-top: 2rem;
         color: $yellow;
         font-size: 3rem;
@@ -34,7 +34,7 @@
             padding-bottom: 0.5rem;
         }
     }
-    .bold{
+    .bold{/* Paragraphe en gras */
         font-weight: bold;
         text-align: left;
     }

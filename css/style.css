@@ -57,6 +57,7 @@ footer {
   right: 0;
 }
 footer a {
+  /* Lien des h3 */
   text-decoration: none;
   margin: auto 1rem;
 }
@@ -70,6 +71,7 @@ footer h3 {
   font-weight: 500;
 }
 
+/* Animation */
 @keyframes effet_wiggle {
   0% {
     transform: translate(0%, 0%);
@@ -135,6 +137,7 @@ footer h3 {
 }
 /* Bouton */
 /* page principal */
+/* base en commun entre les differents menus de la page principal */
 .note, .chic, .delice, .palette {
   /* Structure de base des articles dans la page index */
   width: 80vw;
@@ -148,6 +151,21 @@ footer h3 {
   padding-top: 18vh;
 }
 
+/* Permet de rendre tout le bloc selectionnable */
+.index_bloc_a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  /* (Page principale) animation zoom avec le hover */
+  transition: all 1000ms;
+}
+.index_bloc_a:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+/* Page Principale - Partie note */
 .note {
   background-color: #fce0dc;
   font-family: "Devonshire", sans-serif;
@@ -178,6 +196,7 @@ footer h3 {
   font-weight: bold;
 }
 
+/* Page Principale - Partie chic */
 .chic {
   background-color: #fff5fe;
   font-family: "Croissant One", sans-serif;
@@ -206,6 +225,7 @@ footer h3 {
   font-weight: bold;
 }
 
+/* Page Principale - Partie délice */
 .delice {
   background-color: #f9f9f9;
   font-family: "Dancing Script", sans-serif;
@@ -232,6 +252,7 @@ footer h3 {
   padding: 2rem;
 }
 
+/* Page Principale - Partie palette */
 .palette {
   background-color: #fdfffd;
   font-family: "Kaushan Script", sans-serif;
@@ -257,21 +278,9 @@ footer h3 {
   padding: 2rem;
 }
 
-.index_bloc_a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  /* (Page principale) animation zoom avec le hover */
-  transition: all 1000ms;
-}
-.index_bloc_a:hover {
-  transform: scale(1.2);
-  opacity: 0.7;
-}
-
 /* page principal */
 /* la note enchantee */
+/* Section Premier titre */
 .note_title__heading {
   /* Premier titre h2 */
   font-family: Arial, Helvetica, sans-serif;
@@ -279,6 +288,7 @@ footer h3 {
   font-size: 2rem;
 }
 
+/* Section Carte*/
 .note_menu {
   font-family: "Devonshire", sans-serif;
   background-color: #fce0dc;
@@ -301,11 +311,13 @@ footer h3 {
   font-size: 3rem;
 }
 .note_menu__article h2 .fa-music {
+  /* icon */
   background: linear-gradient(to left, #f7906a, #f14c5e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .note_menu__article div {
+  /* Div qui comprend les titres des plats avec l'effet de soulignement */
   /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
   margin-left: auto;
@@ -379,6 +391,7 @@ footer h3 {
   font-weight: bold;
 }
 .note_menu__article--second_title_h2 {
+  /*Titre dans la carte */
   /* Deuxième titre h2 */
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -386,6 +399,7 @@ footer h3 {
 
 /* page la note enchentee */
 /* Le chic à la française */
+/* Section Premier titre */
 .chic_title__heading {
   /* Premier titre h2 */
   font-family: Arial, Helvetica, sans-serif;
@@ -393,6 +407,7 @@ footer h3 {
   font-size: 2rem;
 }
 
+/* Section Carte*/
 .chic_menu {
   font-family: "Croissant One", sans-serif;
   background-color: #fff5fe;
@@ -419,6 +434,7 @@ footer h3 {
   -webkit-text-fill-color: transparent;
 }
 .chic_menu__article div {
+  /* Div qui comprend les titres des plats avec l'effet de soulignement */
   /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
   margin-left: auto;
@@ -482,24 +498,28 @@ footer h3 {
   font-family: serif;
 }
 .chic_menu__article--one {
+  /* Couleur pour l'article 1 (entrée) avec son effet de souligement */
   color: #d9862a;
 }
 .chic_menu__article--one div h3::after {
   background: #d9862a;
 }
 .chic_menu__article--two {
+  /* Couleur pour l'article 2 (plat)avec son effet de souligement */
   color: #a6679a;
 }
 .chic_menu__article--two div h3::after {
   background: #a6679a;
 }
 .chic_menu__article--three {
+  /* Couleur pour l'article 3 (dessert) avec son effet de souligement */
   color: #915afd;
 }
 .chic_menu__article--three div h3::after {
   background: #915afd;
 }
 .chic_menu__article--second_title_h2 {
+  /*Titre dans la carte */
   /* Deuxième titre h2 */
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -507,6 +527,7 @@ footer h3 {
 
 /* page le chic à la française */
 /* Le delice des papilles */
+/* Section Premier titre */
 .delice_title__heading {
   /* Premier titre h2 */
   font-family: Arial, Helvetica, sans-serif;
@@ -514,6 +535,7 @@ footer h3 {
   font-size: 2rem;
 }
 
+/* Section Carte*/
 .delice_menu {
   font-family: "Dancing Script", sans-serif;
   background-color: #eef0f0;
@@ -539,6 +561,7 @@ footer h3 {
   -webkit-text-fill-color: transparent;
 }
 .delice_menu__article div {
+  /* Div qui comprend les titres des plats avec l'effet de soulignement */
   /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
   margin-left: auto;
@@ -600,6 +623,7 @@ footer h3 {
   font-family: "Segoe Print", "kalam", sans-serif;
 }
 .delice_menu__article--second_title_h2 {
+  /*Titre dans la carte */
   /* Deuxième titre h2 */
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -607,6 +631,7 @@ footer h3 {
 
 /* page le délice des papilles */
 /* palette du gout */
+/* Section Premier titre */
 .palette_title__heading {
   /* Premier titre h2 */
   font-family: Arial, Helvetica, sans-serif;
@@ -614,6 +639,7 @@ footer h3 {
   font-size: 2rem;
 }
 
+/* Section Carte*/
 .palette_menu {
   font-family: "Kaushan Script", sans-serif;
   background-color: #fdfffd;
@@ -641,6 +667,7 @@ footer h3 {
   margin: 0rem;
 }
 .palette_menu__article div {
+  /* Div qui comprend les titres des plats avec l'effet de soulignement */
   /* div contenant les h3 (entree, plat et dessert) avec les traits*/
   display: flex;
   margin-left: auto;
@@ -698,6 +725,7 @@ footer h3 {
   font-weight: bold;
 }
 .palette_menu__article--second_title_h2 {
+  /*Titre dans la carte */
   /* Deuxième titre h2 */
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -711,7 +739,7 @@ footer h3 {
   background: #dddddd;
   margin-bottom: 10rem;
 }
-.mention .heading {
+.mention__heading {
   padding-top: 2rem;
   color: #fdcc44;
   font-size: 3rem;
@@ -738,6 +766,7 @@ footer h3 {
   padding-bottom: 0.5rem;
 }
 .mention .bold {
+  /* Paragraphe en gras */
   font-weight: bold;
   text-align: left;
 }
