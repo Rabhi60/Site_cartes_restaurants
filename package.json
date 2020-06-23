@@ -1,0 +1,22 @@
+{
+  "name": "projet_3",
+  "version": "1.0.0",
+  "description": "Site web responsive de présentation de carte de restaurant chic",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:public/css/style.css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabhi60/site_cartes_restaurants.git"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rabhi60/site_cartes_restaurants/issues"
+  },
+  "homepage": "https://github.com/Rabhi60/site_cartes_restaurants#readme"
+}
