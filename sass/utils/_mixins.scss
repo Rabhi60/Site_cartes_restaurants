@@ -103,7 +103,7 @@
         background:black;
         transform: scaleX(0);
         transform-origin: 0 0;
-        transition: .3s ease-in-out;
+        transition: all .3s ease-in-out;
       }
       &:hover{
         &::after{

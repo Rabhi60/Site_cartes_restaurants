@@ -345,7 +345,7 @@ footer h3 {
   background: black;
   transform: scaleX(0);
   transform-origin: 0 0;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .note_menu__article div h3:hover::after {
   transform: scaleX(1);
@@ -462,7 +462,7 @@ footer h3 {
   background: black;
   transform: scaleX(0);
   transform-origin: 0 0;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .chic_menu__article div h3:hover::after {
   transform: scaleX(1);
@@ -589,7 +589,7 @@ footer h3 {
   background: black;
   transform: scaleX(0);
   transform-origin: 0 0;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .delice_menu__article div h3:hover::after {
   transform: scaleX(1);
@@ -695,7 +695,7 @@ footer h3 {
   background: black;
   transform: scaleX(0);
   transform-origin: 0 0;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .palette_menu__article div h3:hover::after {
   transform: scaleX(1);
